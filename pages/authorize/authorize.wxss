@@ -1,0 +1,31 @@
+/* pages/authorize/authorize.wxss */
+page{
+  background-color: #fff;
+}
+
+.tipImage{
+  display: block;
+  margin: 55rpx auto 0;
+  width: 460rpx;
+}
+
+.tips{
+  display: block;
+  margin: 48rpx auto 73rpx;
+  font-size: 30rpx;
+  color: #666666;
+  text-align: center;
+}
+
+.btn{
+  width: 686rpx;
+  height: 106rpx;
+  line-height: 106rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border: 0;
+  border-radius: 8rpx;
+  background-color: #19AD19;
+  color: #fff;
+}
+
