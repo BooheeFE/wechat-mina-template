@@ -6,7 +6,7 @@
  */
 
 import envConfig from './envConfig.js';
-const { mainHost, waterHost, projectOptions } = envConfig;
+const { mainHost } = envConfig;
 
 // 默认接口出错弹窗文案
 const defaultAlertMessage = '好像哪里出了小问题~ 请再试一次~';

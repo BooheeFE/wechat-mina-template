@@ -18,7 +18,7 @@ const DEFAULT_REQUEST_OPTIONS = {
   dataType: 'json'
 };
 
-function httpServer(opt, callBack) {
+function httpServer(opt) {
   let options = Object.assign({}, DEFAULT_REQUEST_OPTIONS, opt);
   let {url, data, header, method, dataType} = options;
   let timer = null;
@@ -48,7 +48,7 @@ function httpServer(opt, callBack) {
       } else {
         setTimeout(() => {
           utils.toast('哎呦，网络开小差了≧﹏≦');
-        }, 0)
+        }, 0);
         console.log('err:', err, 'url:', url, 'data:', data);
       }
       throw new Error();

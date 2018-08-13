@@ -1,3 +1,9 @@
+/**
+ * @desc login modules
+ * @author simbawu
+ * @date 2018-08-06
+ */
+
 const app = getApp();
 import {getToken, getTokenSilent} from './request.js';
 import {appKey} from '../config/config.js';
@@ -40,14 +46,13 @@ function wxLogin(callBack, userData) {
   });
 }
 
-/* eslint-disable */
 function getUserToken(code, userDate, callBack) {
   let data = {
     code: code,
     data: userDate.encryptedData,
     iv: userDate.iv,
     app_key: appKey
-  }
+  };
 
   getToken(data).then(res => {
     app.globalData.token = res.token;
@@ -59,7 +64,7 @@ function getUserTokenSilent(code, callBack) {
   let data = {
     code: code,
     app_key: appKey
-  }
+  };
 
   getTokenSilent(data).then(res => {
     let token = res && res.token;
@@ -75,7 +80,7 @@ function getUserTokenSilent(code, callBack) {
 
 function handleToken(token, callBack) {
   app.globalData.token = token;
-  typeof callBack == "function" && callBack();
+  typeof callBack === "function" && callBack();
 }
 
 export default login;

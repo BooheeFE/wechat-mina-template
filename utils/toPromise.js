@@ -1,13 +1,15 @@
 /**
- * Created by simbawu on 2018/02/27.
+ * @desc extend & Promise api
+ * @author simbawu
+ * @date 2018-08-06
  */
 
 let wxKeys = [
   // 存储需要Promise化的接口名字
   'request'
 ];
+
 // 扩展 Promise 的 finally 功能
-/* eslint-disable */
 Promise.prototype.finally = function(callback) {
   let P = this.constructor;
   return this.then(
