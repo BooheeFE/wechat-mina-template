@@ -22,8 +22,8 @@ const envConfig = {
     // 项目接口域名
     mainHost: 'https://github.com/BooheeFE/'
   }
-}
+};
 
-export default {
+module.exports = {
 	mainHost: envConfig[env].mainHost
-}
+};
