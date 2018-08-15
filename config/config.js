@@ -1,11 +1,10 @@
 /*
- * 环境配置
- * @param {string} mainHost 项目主API域名
- * @param {string} waterHost 配置中心域名
- * @param {Object} projectOptions 配置中心加密参数app_key, app_secret
+ * @desc 系统配置
+ * @author simbawu
+ * @date 2018-08-06
  */
 
-import envConfig from './envConfig.js';
+import envConfig from './env-config.js';
 const { mainHost } = envConfig;
 
 // 默认接口出错弹窗文案

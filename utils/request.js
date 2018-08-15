@@ -4,8 +4,8 @@
  * @date 2018-08-06
  */
 
-import {mainHost} from '../config/envConfig.js';
-import httpServer from './httpServer.js';
+import {mainHost} from '../config/env-config.js';
+import httpServer from './http-server.js';
 
 // 获取token
 let getToken = function(data) {

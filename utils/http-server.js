@@ -4,7 +4,7 @@
  * @date 2018-08-06
  */
 
-import './toPromise.js';
+import './to-promise.js';
 import utils from 'util.js';
 
 const DEFAULT_REQUEST_OPTIONS = {
