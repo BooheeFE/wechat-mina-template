@@ -1,6 +1,6 @@
 <!--pages/authorize/authorize.wxml-->
-<view class='container'>
-  <image class='tipImage' src='//up.boohee.cn/house/u/nice/motion/authorize.png'></image>
-  <text class='tips'>朋友，你好！为了给您提供更加优质的服务\n我们需要得到您的授权</text>
-  <button class='btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">一键授权</button>
+<view class="container">
+  <image class="tip-image" src="//up.boohee.cn/house/u/nice/motion/authorize.png"></image>
+  <text class="tips">朋友，你好！为了给您提供更加优质的服务\n我们需要得到您的授权</text>
+  <button class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">一键授权</button>
 </view>

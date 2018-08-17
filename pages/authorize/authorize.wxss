@@ -3,7 +3,7 @@ page{
   background-color: #fff;
 }
 
-.tipImage{
+.tip-image{
   display: block;
   margin: 55rpx auto 0;
   width: 460rpx;
