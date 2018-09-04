@@ -4,11 +4,31 @@
  * @date 2018-08-06
  */
 
-/*
- * 环境切换
+const app = getApp();
+
+/**
+ * 获取小程序环境
+ * @function
+ * @param {Number} defaultEnv
+ * @return {string}
  */
-const env = 'production';
-// const env = 'qa';
+function getEnv(defaultEnv){
+  // envVersion值有：正式版 release、体验版 trial、开发版 develop、开发者工具 undefined、低版本微信 undefined
+  let envVersion = __wxConfig.envVersion;
+  let env = 'production';
+  const envList = ['production', 'qa'];
+
+  if (envVersion === 'trial' || envVersion === 'develop' || app.globalData.openFrom === 'devtools'){
+    env = 'qa';
+  } else if (envVersion === 'release') {
+    env = 'production';
+  }
+
+  return envList[defaultEnv] || env;
+}
+
+// 如果希望强制使用某个环境，可手动在getEnv内传入数字，0 => production，1 => qa，不传表示通过小程序版本类型自动决定。
+const env = getEnv();
 
 /*
  * 环境配置
