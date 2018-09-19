@@ -4,8 +4,6 @@
  * @date 2018-08-06
  */
 
-const app = getApp();
-
 /**
  * 获取小程序环境
  * @function
