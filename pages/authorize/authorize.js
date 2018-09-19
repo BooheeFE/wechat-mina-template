@@ -26,7 +26,7 @@ Page({
             title: '提示',
             content: '请切换到“允许”！',
             showCancel: false,
-            success: function () {
+            success: function() {
               self.authorize();
             }
           });
@@ -40,12 +40,12 @@ Page({
     let userData = e.detail;
     if (!userData.encryptedData) {
       self.authorize();
-    }else {
+    } else {
       login(() => {
         utils.toast('授权成功！', 1500, 'success');
         setTimeout(() => {
           wx.navigateBack();
-        },1500);
+        }, 1500);
       }, userData);
     }
   },

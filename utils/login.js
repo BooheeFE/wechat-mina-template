@@ -73,9 +73,9 @@ function getUserTokenSilent(code, callBack) {
     } else {
       wx.navigateTo({
         url: '/pages/authorize/authorize'
-      })
+      });
     }
-  })
+  });
 }
 
 function handleToken(token, callBack) {

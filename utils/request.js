@@ -14,7 +14,7 @@ let getToken = function(data) {
     data: data,
     method: 'POST'
   });
-}
+};
 
 // 静默获取token
 let getTokenSilent = function(data) {
