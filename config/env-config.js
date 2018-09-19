@@ -10,19 +10,19 @@
  * @param {Number} defaultEnv
  * @return {string}
  */
-function getEnv(defaultEnv){
+function getEnv(defaultEnv) {
   // envVersion值有：正式版 release、体验版 trial、开发版 develop、开发者工具 undefined、低版本微信 undefined
   let envVersion = __wxConfig.envVersion;
   let env = 'production';
   const envList = ['production', 'qa'];
 
-  if (envVersion === 'trial' || envVersion === 'develop' || wx.getStorageSync('env') === 'qa'){
+  if (envVersion === 'trial' || envVersion === 'develop' || wx.getStorageSync('env') === 'qa') {
     env = 'qa';
   } else if (envVersion === 'release') {
     env = 'production';
   }
 
-  env = envList[defaultEnv] ||  env;
+  env = envList[defaultEnv] || env;
 
   return env;
 }
