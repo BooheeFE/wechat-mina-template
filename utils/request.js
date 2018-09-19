@@ -23,7 +23,7 @@ let getTokenSilent = function(data) {
     data: data,
     method: 'POST'
   });
-}
+};
 
 /*
  * 导出对外开放接口

@@ -5,7 +5,7 @@
  */
 
 import './to-promise.js';
-import utils from 'util.js';
+import utils from './util.js';
 
 const DEFAULT_REQUEST_OPTIONS = {
   url: '',

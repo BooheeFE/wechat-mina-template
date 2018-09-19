@@ -44,4 +44,3 @@ wxKeys.forEach(key => {
     });
   }
 });
-

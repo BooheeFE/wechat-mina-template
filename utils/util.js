@@ -82,7 +82,7 @@ let util = {
    * @return {Object} 返回本地地址.
    */
   onlineImageToLocal(onlineImageUrl) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       wx.downloadFile({
         url: onlineImageUrl,
         success: function(res) {
@@ -98,7 +98,7 @@ let util = {
    */
   myRegExp: {
     isWeixin: (data, tips = '请填写正确的微信号') => {
-      let reg = /[1-9][0-9]{4,}|^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/;
+      let reg = /[1-9][0-9]{5,19}|^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/;
       if (reg.test(data)) {
         return true;
       } else {
@@ -196,8 +196,6 @@ let util = {
     let currentPage = _currentPage[_currentPage.length - 1].route;
     return currentPage;
   }
-}
+};
 
 export default util;
-
-
