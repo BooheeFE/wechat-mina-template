@@ -5,7 +5,7 @@
  */
 
 import './to-promise.js';
-import utils from './util.js';
+import {toast, alert} from './util.js';
 
 const DEFAULT_REQUEST_OPTIONS = {
   url: '',
@@ -23,7 +23,7 @@ function httpServer(opt) {
   let {url, data, header, method, dataType} = options;
   let timer = null;
   timer = setTimeout(() => {
-    utils.toast('加载中...', 1500, 'loading');
+    toast('加载中...', 1500, 'loading');
   }, 500);
   return wx.request({
     url: url,
@@ -44,10 +44,10 @@ function httpServer(opt) {
     }).catch(err => {
       clearTimeout(timer);
       if (err.message) {
-        utils.alert('提示', err.message);
+        alert('提示', err.message);
       } else {
         setTimeout(() => {
-          utils.toast('哎呦，网络开小差了≧﹏≦');
+          toast('哎呦，网络开小差了≧﹏≦');
         }, 0);
         console.log('err:', err, 'url:', url, 'data:', data);
       }

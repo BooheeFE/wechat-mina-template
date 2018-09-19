@@ -4,7 +4,7 @@
  * @date 2018-08-06
  */
 
-import utils from './utils/util.js';
+import {checkUpdate} from './utils/util.js';
 
 App({
   globalData: {
@@ -15,6 +15,6 @@ App({
     wx.setStorageSync('env', options.query.env);
 
     // 检查小程序是否有新版本
-    utils.checkUpdate();
+    checkUpdate();
   }
 });

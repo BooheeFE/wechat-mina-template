@@ -1,6 +1,6 @@
 // pages/authorize/authorize.js
 import login from '../../utils/login.js';
-import utils from '../../utils/util.js';
+import {toast} from '../../utils/util.js';
 
 Page({
 
@@ -42,7 +42,7 @@ Page({
       self.authorize();
     } else {
       login(() => {
-        utils.toast('授权成功！', 1500, 'success');
+        toast('授权成功！', 1500, 'success');
         setTimeout(() => {
           wx.navigateBack();
         }, 1500);
