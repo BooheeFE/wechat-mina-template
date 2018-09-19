@@ -18,13 +18,15 @@ function getEnv(defaultEnv){
   let env = 'production';
   const envList = ['production', 'qa'];
 
-  if (envVersion === 'trial' || envVersion === 'develop' || app.globalData.openFrom === 'devtools'){
+  if (envVersion === 'trial' || envVersion === 'develop' || wx.getStorageSync('env') === 'qa'){
     env = 'qa';
   } else if (envVersion === 'release') {
     env = 'production';
   }
 
-  return envList[defaultEnv] || env;
+  env = envList[defaultEnv] ||  env;
+
+  return env;
 }
 
 // 如果希望强制使用某个环境，可手动在getEnv内传入数字，0 => production，1 => qa，不传表示通过小程序版本类型自动决定。
@@ -44,6 +46,8 @@ const envConfig = {
   }
 };
 
-module.exports = {
-	mainHost: envConfig[env].mainHost
+const { mainHost } = envConfig[env];
+
+export {
+  mainHost
 };
