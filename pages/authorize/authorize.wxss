@@ -1,23 +1,24 @@
 /* pages/authorize/authorize.wxss */
-page{
+
+page {
   background-color: #fff;
 }
 
-.tip-image{
+.tip-image {
   display: block;
   margin: 55rpx auto 0;
   width: 460rpx;
 }
 
-.tips{
+.tips {
   display: block;
   margin: 48rpx auto 73rpx;
   font-size: 30rpx;
-  color: #666666;
+  color: #666;
   text-align: center;
 }
 
-.btn{
+.btn {
   width: 686rpx;
   height: 106rpx;
   line-height: 106rpx;
@@ -25,7 +26,7 @@ page{
   font-size: 30rpx;
   border: 0;
   border-radius: 8rpx;
-  background-color: #19AD19;
+  background-color: #19ad19;
   color: #fff;
 }
 
